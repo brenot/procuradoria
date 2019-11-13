@@ -32,7 +32,7 @@ return [
             'O campo :attribute deve conter um arquivo de :min a :max kilobytes.',
         'string' =>
             'O campo :attribute deve conter entre :min a :max caracteres.',
-        'array' => 'O campo :attribute deve conter de :min a :max itens.',
+        'array' => 'O campo :attribute deve conter de :min a :max itens.'
     ],
     'boolean' => 'O campo :attribute deve conter o valor verdadeiro ou falso.',
     'confirmed' => 'A confirmação para o campo :attribute não coincide.',
@@ -66,7 +66,7 @@ return [
             'O campo :attribute não pode conter um arquivo com mais de :max kilobytes.',
         'string' =>
             'O campo :attribute não pode conter mais de :max caracteres.',
-        'array' => 'O campo :attribute deve conter no máximo :max itens.',
+        'array' => 'O campo :attribute deve conter no máximo :max itens.'
     ],
     'mimes' => 'O campo :attribute deve conter um arquivo do tipo: :values.',
     'mimetypes' =>
@@ -77,7 +77,7 @@ return [
         'file' =>
             'O campo :attribute deve conter um arquivo com no mínimo :min kilobytes.',
         'string' => 'O campo :attribute deve conter no mínimo :min caracteres.',
-        'array' => 'O campo :attribute deve conter no mínimo :min itens.',
+        'array' => 'O campo :attribute deve conter no mínimo :min itens.'
     ],
     'not_in' => 'O campo :attribute contém um valor inválido.',
     'numeric' => 'O campo :attribute deve conter um valor numérico.',
@@ -102,7 +102,7 @@ return [
         'file' =>
             'O campo :attribute deve conter um arquivo com o tamanho de :size kilobytes.',
         'string' => 'O campo :attribute deve conter :size caracteres.',
-        'array' => 'O campo :attribute deve conter :size itens.',
+        'array' => 'O campo :attribute deve conter :size itens.'
     ],
     'string' => 'O campo :attribute deve ser uma string.',
     'timezone' => 'O campo :attribute deve conter um fuso horário válido.',
@@ -225,7 +225,7 @@ return [
         'disabled_at' => 'Desabilitado em',
         'disabled_by_id' => 'Desabilitado por',
         'subject_id' => 'Assunto',
-        'parent_id' => 'Assunto',
+        'parent_id' => 'Assunto'
     ],
 
     'classes' => [
@@ -237,6 +237,6 @@ return [
         'Andamento' => 'Andamento',
         'Opinion' => 'Parecer',
         'OpinionSubject' => 'Assunto',
-        'Lei' => 'Lei',
-    ],
+        'Lei' => 'Lei'
+    ]
 ];

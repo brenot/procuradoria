@@ -19,21 +19,48 @@ class RemoveWrongSubject extends Migration
     public function up()
     {
         $findId = OpinionSubject::find($this->id);
-        $findName = OpinionSubject::where('name',$this->name)->first();
+        $findName = OpinionSubject::where('name', $this->name)->first();
 
-        if($findId && $findName && $findName->id == $findId->id){
-            dump('Found subject with id='.$this->id.' and name='.$this->name);
+        if ($findId && $findName && $findName->id == $findId->id) {
+            dump(
+                'Found subject with id=' .
+                    $this->id .
+                    ' and name=' .
+                    $this->name
+            );
 
-            OpinionsSubject::where('subject_id',$findId->id)->get()->each(function($item) use ($findId){
-                dump('Found relation with id='.$item->id.', subject_id='.$findId->id);
-                $item->delete();
-                dump('Removed relation with id='.$item->id.', subject_id='.$findId->id);
-            });
+            OpinionsSubject::where('subject_id', $findId->id)
+                ->get()
+                ->each(function ($item) use ($findId) {
+                    dump(
+                        'Found relation with id=' .
+                            $item->id .
+                            ', subject_id=' .
+                            $findId->id
+                    );
+                    $item->delete();
+                    dump(
+                        'Removed relation with id=' .
+                            $item->id .
+                            ', subject_id=' .
+                            $findId->id
+                    );
+                });
 
             $findId->delete();
-            dump('Removed subject with id='.$this->id.' and name='.$this->name);
-        }else{
-            dump('Not found any subject with id='.$this->id.' and name='.$this->name);
+            dump(
+                'Removed subject with id=' .
+                    $this->id .
+                    ' and name=' .
+                    $this->name
+            );
+        } else {
+            dump(
+                'Not found any subject with id=' .
+                    $this->id .
+                    ' and name=' .
+                    $this->name
+            );
         }
     }
 

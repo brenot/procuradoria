@@ -82,7 +82,7 @@ class Buscas extends Base
                 'tipo_meio_id' => app(Meios::class)->findByColumn(
                     'nome',
                     'Eletrônico'
-                )->id,
+                )->id
             ]);
 
             $proceeding->imported_at = now();

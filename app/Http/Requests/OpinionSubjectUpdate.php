@@ -30,7 +30,7 @@ class OpinionSubjectUpdate extends OpinionSubjectStore
             'parent_id' => new IdNotEqualsToParentId(
                 $this->get('id'),
                 $this->get('parent_id')
-            ),
+            )
         ];
     }
 }

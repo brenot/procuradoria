@@ -25,7 +25,7 @@ class OpinionSubject extends BaseModel
         'edit_link',
         'full_name',
         'level',
-        'indented_name',
+        'indented_name'
     ];
 
     protected $appends = ['full_name'];

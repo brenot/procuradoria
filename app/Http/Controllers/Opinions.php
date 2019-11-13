@@ -134,7 +134,7 @@ class Opinions extends Controller
             [
                 'Content-Type' => $mime,
                 'Content-Disposition' =>
-                    'attachment; filename="' . $fileName . '"',
+                    'attachment; filename="' . $fileName . '"'
             ]
         );
 
@@ -191,7 +191,7 @@ class Opinions extends Controller
         return view('opinions.form')
             ->with('formDisabled', true)
             ->with([
-                'opinion' => OpinionModel::withoutGlobalScopes()->find($id),
+                'opinion' => OpinionModel::withoutGlobalScopes()->find($id)
             ])
             ->with('isProcurador', $user->is_procurador)
             ->with(
@@ -256,7 +256,7 @@ class Opinions extends Controller
             )->allOrderBy('name'),
             'approveOptions' => app(ApproveOptionsRepository::class)
                 ->allOrderBy('name')
-                ->pluck('name', 'id'),
+                ->pluck('name', 'id')
         ];
     }
 }
