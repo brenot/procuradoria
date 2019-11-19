@@ -1,9 +1,5 @@
 <div class="form-group pull-right">
     <div class="row">
-        <div class="col-xs-2">
-            <a href="{{ route($routeCreate) }}" class="btn btn-danger pull-right">
-                <i class="fa fa-plus"></i> Novo</a>
-        </div>
 
         <div class="col-xs-8">
             <div class="input-group" role="button">
@@ -20,18 +16,33 @@
                 <input type="checkbox" v-model="processos_arquivados_incluidos" id="processos_arquivados_incluidos" value="true" @change="processosArquivados" v-bind:true-value="1" v-bind:false-value="0">
                 <label for="processos_arquivados_incluidos"> Mostrar arquivados </label>
             </div>
+
         </div>
 
-        <select
-                v-model="perPage"
-        >
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-            <option value="all">TODOS</option>
-        </select>
+        <div class="col-xs-1">
+            <select
+                    v-model="perPage"
+            >
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="all">TODOS</option>
+            </select>
+        </div>
+
+        <div class="col-xs-2">
+            <button type="button" :class="'btn ' + (advancedFilter ? 'btn-danger' : 'btn-default')" data-toggle="modal" data-target="#myModal">
+                <i class="fa fa-filter"></i> Filtro avançado
+            </button>
+            <button type="button" :class="'btn ' + (advancedFilter ? 'btn-danger' : 'btn-default')" @click="turnAdvancedFilterOff">
+                <i class="fas fa-times"></i>
+            </button>
+
+        </div>
+
+
     </div>
 </div>

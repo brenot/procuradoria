@@ -14,5 +14,6 @@ class Acao extends BaseModel
     /**
      * @var array
      */
+
     protected $fillable = ['nome', 'abreviacao'];
 }

@@ -21,6 +21,9 @@
                 v-model="page"
         ></paginate>
     </div>
+
+
+
     <div class="col-md-6">
         <div class="text-right align-middle" >
             <p class="text-danger" v-if="refreshing">carregando...</p>
@@ -107,6 +110,29 @@
 
 <table id="example" class="table table-striped table-bordered visible-lg" cellspacing="0" width="100%">
     <thead>
+    <tr>
+
+        
+            <h3><span>@{{ tables.processos.total }}</span> Processo<span>@{{ tables.processos.length == 1 ? '' : 's' }}</span></h3>
+
+
+
+
+            <div class="col-md-6">
+                <paginate
+                        :page-count="pageCount()"
+                        :prev-text="'Anterior'"
+                        :next-text="'Próxima'"
+                        :click-handler="clickPageCallback"
+                        container-class="pagination"
+                        v-model="page"
+                ></paginate>
+            </div>
+
+
+    </tr>
+
+
         <tr>
             <th>Link</th>
             <th>Número judicial</th>
