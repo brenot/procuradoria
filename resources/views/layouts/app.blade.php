@@ -31,7 +31,8 @@
 
                         <!-- Branding Image -->
                         <a class="navbar-brand" href="{{ url('/') }}">
-                            {{ config('app.name', 'Laravel') }}
+                            <img src="/svg/procuradoria_azul.svg" class="procuradoria-logo img-responsive" alt="Procuradoria - Alerj">
+                            {{--{{ config('app.name', 'Laravel') }}--}}
                         </a>
                     </div>
 
@@ -67,12 +68,23 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12">
+
+
                             @yield('content')
+
                         </div>
                     </div>
                 </div>
 
-                <div class="container-fluid">
+
+                <footer class="footer">
+                    <div class="container-fluid text-center">
+                        @version
+                    </div>
+                </footer>
+
+
+                {{--<div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="text-center">
@@ -80,7 +92,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--}}
+
             </div>
         </div>
 

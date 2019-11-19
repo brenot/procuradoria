@@ -13,7 +13,10 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
-@import "../../../node_modules/font-awesome/scss/font-awesome.scss";
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
 @import "../../../node_modules/fullcalendar/dist/fullcalendar.css";
 
@@ -29,6 +32,14 @@
 
 // Select2-To-Tree
 @import "../../../resources/assets/packages/select2-to-tree/select2-to-tree-master/src/select2totree.css";
+
+
+// Buttons
+@import "_buttons";
+
+// Footer
+@import "_footer";
+
 
 
 // Login

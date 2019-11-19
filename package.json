@@ -15,7 +15,6 @@
         "bootstrap": "^4.3.1",
         "bootstrap-sass": "^3.4.1",
         "cross-env": "^5.2.1",
-        "font-awesome": "^4.7.0",
         "fullcalendar": "^3.10.1",
         "jquery": "^3.4.1",
         "laravel-mix": "^4.1.4",
@@ -34,5 +33,7 @@
         "vuejs-paginate": "^2.1.0",
         "webpack-livereload-plugin": "^2.2.0"
     },
-    "dependencies": {}
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.11.2"
+    }
 }

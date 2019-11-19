@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="panel panel-default" id="vue-agenda">
-        <div class="panel-heading hidden-print">
+    <div class="" id="vue-agenda">
+        <div class="hidden-print">
             <div class="row text-center">
                 <div class="col-md-12">
                     <br><br><br><br>
@@ -10,25 +10,28 @@
                 </div>
 
                 <div class="col-md-12">
-                    <br><br><br><br>
 
-                    <a
-                        class="btn btn-lg btn-primary"
-                        style="font-size: 3em;"
-                        href="{{ route('subsystem.select', ['type' => App\Support\Constants::SUBSYSTEM_PROCESSOS]) }}"
-                    >
-                        Processos
-                    </a>
+                    <div class="home-buttons">
 
-                    <a
-                        class="btn btn-lg btn-primary"
-                        style="font-size: 3em;"
-                        href="{{ route('subsystem.select', ['type' => App\Support\Constants::SUBSYSTEM_OPINIOES]) }}"
-                    >
-                        Pareceres
-                    </a>
+                        <a
+                                class="btn btn-primary btn-lg raised gradient"
+                                style="font-size: 3em;"
+                                href="{{ route('subsystem.select', ['type' => App\Support\Constants::SUBSYSTEM_PROCESSOS]) }}"
+                        >
+                            <i class="fas fa-gavel"></i> Processos
+                        </a>
 
-                    <br><br><br><br>
+                        <a
+                                class="btn btn-primary btn-lg raised gradient"
+                                style="font-size: 3em;"
+                                href="{{ route('subsystem.select', ['type' => App\Support\Constants::SUBSYSTEM_OPINIOES]) }}"
+                        >
+                            <i class="fas fa-layer-group"></i> Pareceres
+                        </a>
+
+
+                    </div>
+
                 </div>
             </div>
         </div>

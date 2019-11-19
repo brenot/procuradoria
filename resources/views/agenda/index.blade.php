@@ -2,8 +2,10 @@
 
 @section('content')
 
-    <div class="panel panel-default" id="vue-agenda">
-        <div class="panel-heading hidden-print">
+    <div class="" id="vue-agenda">
+
+
+        
             <div class="row">
                 <div class="col-md-3">
                     <h4>Agenda</h4>
@@ -23,8 +25,10 @@
             <div class="btn btn-primary" @click="print()"><i class="fa fa-print"></i> Imprimir</div>
         </div>
 
-        <div class="panel-body">
+        <div class="">
             @include('agenda.partials.calendar')
         </div>
+
+
     </div>
 @endsection

@@ -11,43 +11,29 @@
             <div class="col-md-8 col-lg-6 mx-auto">
                 <div class="card">
                     <div class="card-header">
-                        <img src="/svg/procuradoria_azul.svg" class="procuradoria-logo-login img-responsive" alt="Eventos - Alerj">
+                        <img src="/svg/procuradoria_azul.svg" class="procuradoria-logo-login img-responsive" alt="Procuradoria - Alerj">
                     </div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
-                            @csrf
+                            {{ csrf_field() }}
 
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    {{--<label for="email" class="col-form-label">Login Alerj</label>--}}
-                                    <input id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus  placeholder="Login Alerj">
-
-                                    @if ($errors->has('email'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                    @endif
+                                    <input id="email" class="form-control" name="email" placeholder="Login Alerj" value="{{ old('email') }}" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    {{--<label for="password" class="col-form-label">Senha</label>--}}
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Senha" >
-
-                                    @if ($errors->has('password'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                    @endif
+                                    <input id="password" type="password" class="form-control" name="password" placeholder="Senha" required>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <div class="col-md-12 ">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                         <label class="form-check-label" for="remember">
                                             Lembrar de mim
@@ -58,9 +44,11 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-12">
-                                    <button dusk="login-button" type="submit" class="btn btn-primary btn-block">
+
+                                    <button type="submit" class="btn btn-primary btn-block">
                                         Entrar
                                     </button>
+
                                 </div>
                             </div>
                         </form>
@@ -74,8 +62,8 @@
 
 
 
+{{--
 
-    {{--
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
@@ -127,7 +115,8 @@
                 </div>
             </div>
         </div>
-    --}}
+
+--}}
 
 
 @endsection
